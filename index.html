@@ -8,7 +8,7 @@
 <meta property="og:title" content="Serenitéé · Pastelería artesanal">
 <meta property="og:description" content="Tortas y tartas artesanales en Martínez, San Isidro. Armá tu pedido y envialo por WhatsApp.">
 <meta property="og:image" content="/img/pavlova.jpg">
-<meta name="theme-color" content="#FFFD8C">
+<meta name="theme-color" content="#FCFFF5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FFFD8C'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%236E2735'%3ES%3C/text%3E%3C/svg%3E">
 <style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -17,7 +17,7 @@
 <style>
 /* Layout: full-width color bands (manteca / crema / bordó) stacked like the catalog pages; product grid of 4:5 photos with a bordó caption block under each, as in the printed catalog. */
 :root{
-  --manteca:#FFFD8C; --crema:#FFFFE2; --bordo:#6E2735; --carbon:#161500;
+  --manteca:#FFFD8C; --crema:#FFFFE2; --ceramica:#FCFFF5; --bordo:#6E2735; --carbon:#161500;
   --bg:var(--crema); --fg:var(--carbon); --band:var(--crema);
   --card:var(--bordo); --card-fg:var(--crema); --card-muted:#E9C9CF;
   --muted:#6B6342; --line:rgba(22,21,0,.14); --chip:#FFFD8C; --chip-fg:#6E2735;
@@ -33,7 +33,7 @@
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--manteca)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ceramica)}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
 h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;letter-spacing:-.01em}
@@ -44,7 +44,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--bordo);outline-offset:3px}
 
 /* header */
-header{background:var(--manteca);position:sticky;top:env(safe-area-inset-top,0px);z-index:9;border-bottom:1px solid var(--line)}
+header{background:var(--ceramica);position:sticky;top:env(safe-area-inset-top,0px);z-index:9;border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
 .logo{display:block;height:34px;width:auto;color:var(--bordo)}
 .logo svg{height:100%;width:auto;display:block}
