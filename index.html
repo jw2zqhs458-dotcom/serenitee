@@ -19,7 +19,7 @@
 :root{
   --manteca:#FFFD8C; --crema:#FFFFE2; --ceramica:#FCFFF5; --bordo:#6E2735; --carbon:#161500;
   --bg:var(--crema); --fg:var(--carbon); --band:var(--crema);
-  --card:var(--bordo); --card-fg:var(--crema); --card-muted:#E9C9CF;
+  --card:var(--ceramica); --card-fg:var(--carbon); --card-muted:#6B6342;
   --muted:#6B6342; --line:rgba(22,21,0,.14); --chip:#FFFD8C; --chip-fg:#6E2735;
   --btn:var(--bordo); --btn-fg:var(--manteca);
   --display:"Montserrat",system-ui,sans-serif; --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
@@ -80,15 +80,15 @@ section.tight{padding-top:8px}
 .sec-head{display:grid;gap:8px;margin-bottom:28px}
 .sec-head p{margin:0;color:var(--muted);max-width:60ch}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
-.card{display:flex;flex-direction:column;background:var(--card);color:var(--card-fg);border-radius:4px;overflow:hidden;min-width:0}
+.card{display:flex;flex-direction:column;background:var(--card);color:var(--card-fg);border:1px solid var(--line);border-radius:4px;overflow:hidden;min-width:0}
 .card .ph{aspect-ratio:4/5;max-width:100%;overflow:hidden;background:#d8d4c8}
 .card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .card:hover img{transform:scale(1.03)}
 .card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
-.card h3{font-size:1.02rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase}
+.card h3{font-size:1.02rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--bordo)}
 .card p{margin:0;font-size:.92rem;color:var(--card-muted);line-height:1.45;flex:1}
-.card .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,226,.18)}
-.price{font-family:var(--display);font-weight:800;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.card .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.price{font-family:var(--display);font-weight:800;font-size:1.15rem;font-variant-numeric:tabular-nums;color:var(--bordo)}
 .price small{font-family:var(--body);font-weight:400;font-size:.8rem;opacity:.85}
 .price small:only-child{font-family:var(--display);font-weight:700;font-size:.9rem;opacity:1}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
@@ -128,11 +128,11 @@ footer a{color:inherit}
 
 /* add-to-cart control on cards */
 .card .vars{display:flex;gap:6px;margin-top:4px}
-.card .vars button{font:inherit;font-family:var(--display);font-weight:700;font-size:.75rem;letter-spacing:.04em;cursor:pointer;border-radius:999px;border:1.5px solid rgba(255,255,226,.5);background:transparent;color:var(--card-fg);padding:5px 11px}
-.card .vars button.on{background:var(--card-fg);color:var(--bordo);border-color:var(--card-fg)}
+.card .vars button{font:inherit;font-family:var(--display);font-weight:700;font-size:.75rem;letter-spacing:.04em;cursor:pointer;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--fg);padding:5px 11px}
+.card .vars button.on{background:var(--bordo);color:var(--crema);border-color:var(--bordo)}
 .card .add{display:flex;align-items:center;gap:8px;flex:none}
-.card .add button{font:inherit;font-family:var(--display);font-weight:700;font-size:.85rem;cursor:pointer;border-radius:999px;border:1.5px solid var(--card-fg);background:transparent;color:var(--card-fg);padding:8px 14px}
-.card .add button.primary{background:var(--manteca);color:var(--bordo);border-color:var(--manteca)}
+.card .add button{font:inherit;font-family:var(--display);font-weight:700;font-size:.85rem;cursor:pointer;border-radius:999px;border:1.5px solid var(--bordo);background:transparent;color:var(--bordo);padding:8px 14px}
+.card .add button.primary{background:var(--bordo);color:var(--manteca);border-color:var(--bordo)}
 .card .add .qty{display:none;align-items:center;gap:4px}
 .card.in .add .qty{display:inline-flex}
 .card.in .add .primary{display:none}
