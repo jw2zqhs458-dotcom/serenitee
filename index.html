@@ -372,7 +372,7 @@ const save = () => { try{ localStorage.setItem("serenitee-cart", JSON.stringify(
 const $ = id => document.getElementById(id);
 const DIAS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
 const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-const DIRECCION = "el taller en Martínez, San Isidro";
+const DIRECCION = "Martínez, San Isidro";
 
 function setQty(key, q){
   q = Math.max(0, Math.min(99, q|0));
@@ -437,13 +437,13 @@ function waMsg(items,d,modo){
   const nombre = $("f-nombre").value.trim(); const nota = $("f-nota").value.trim();
   const total = items.reduce((s,x)=>s+(x.p.precio||0)*x.q,0);
   const consultar = items.some(x=>x.p.precio==null);
-  const L = ["Hola Serenitée! Quiero hacer un pedido:", ""];
+  const L = ["Hola Serenitée! Quiero hacer un pedido:", "", "*Pedido*"];
   items.forEach(({p,q,nombre})=> L.push(`• ${q} × ${nombre}${p.unidad?" ("+p.unidad+")":""} — ${p.precio==null?"precio a consultar":fmt(p.precio*q)}`));
-  L.push("", `Total estimado: ${fmt(total)}${consultar?" + lo que se cotice":""}`);
-  L.push(`Fecha: ${DIAS[d.getDay()]} ${d.getDate()} de ${MESES[d.getMonth()]}, por la ${hora}`);
-  L.push(modo==="envio" ? `Envío a domicilio: ${$("f-direccion").value.trim()} (costo del envío a mi cargo)` : `Retiro por ${DIRECCION}`);
-  if(nombre) L.push(`Nombre: ${nombre}`);
-  if(nota) L.push(`Aclaraciones: ${nota}`);
+  L.push("", `*Total estimado:* ${fmt(total)}${consultar?" + lo que se cotice":""}`);
+  L.push(`*Fecha:* ${DIAS[d.getDay()]} ${d.getDate()} de ${MESES[d.getMonth()]}, por la ${hora}`);
+  L.push(modo==="envio" ? `*Envío a domicilio:* ${$("f-direccion").value.trim()} (costo del envío a mi cargo)` : `*Retiro en el taller:* ${DIRECCION}`);
+  if(nombre) L.push(`*Nombre:* ${nombre}`);
+  if(nota) L.push(`*Aclaraciones:* ${nota}`);
   L.push("", "¿Me confirman disponibilidad? Gracias!");
   return `https://wa.me/${WA}?text=${encodeURIComponent(L.join("\n"))}`;
 }
