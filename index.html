@@ -100,8 +100,8 @@ section.tight{padding-top:8px}
 /* how to */
 .how{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.step{background:var(--manteca);color:var(--carbon);border-radius:4px;padding:22px;min-width:0}
-.step p{color:#5A5330}
+.step{background:var(--ceramica);color:var(--carbon);border:1px solid var(--line);border-radius:4px;padding:22px;min-width:0}
+.step p{color:var(--muted)}
 .step .n{font-family:var(--display);font-weight:800;font-size:2rem;color:var(--bordo);line-height:1}
 [data-theme="dark"] .step .n{color:var(--manteca)}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .step .n{color:var(--manteca)} }
@@ -150,7 +150,7 @@ footer a{color:inherit}
 .drawer{position:fixed;top:0;right:0;bottom:0;z-index:30;width:min(440px,100%);background:var(--bg);color:var(--fg);transform:translateX(105%);transition:transform .25s;display:flex;flex-direction:column;overflow-y:auto;padding-top:env(safe-area-inset-top,0px);box-shadow:-8px 0 30px rgba(0,0,0,.2)}
 body.cart-open .drawer{transform:none}
 body.cart-open .scrim{opacity:1;pointer-events:auto}
-.drawer header{position:sticky;top:0;z-index:2;background:var(--manteca);border-bottom:1px solid var(--line)}
+.drawer header{position:sticky;top:0;z-index:2;background:var(--ceramica);border-bottom:1px solid var(--line)}
 .drawer header .wrap{padding-block:14px}
 .drawer h2{font-size:1.25rem;color:var(--bordo)}
 .drawer .x{font:inherit;font-size:1.4rem;line-height:1;background:transparent;border:0;cursor:pointer;color:var(--bordo);padding:4px 8px}
