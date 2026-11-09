@@ -115,7 +115,8 @@ section.tight{padding-top:8px}
 dl{display:grid;grid-template-columns:7.5rem 1fr;gap:10px 16px;align-items:baseline;margin:16px 0 0}
 dt{font-family:var(--display);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);line-height:1.55}
 dd{margin:0;min-width:0;line-height:1.55}
-.phone{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums;user-select:all}
+.phone{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums;color:var(--bordo);text-decoration:none;border-bottom:1.5px solid currentColor}
+.phone:hover{opacity:.8}
 .copy{font:inherit;font-family:var(--display);font-weight:700;font-size:.75rem;line-height:1;background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;color:inherit;margin-left:10px;vertical-align:baseline}
 @media (max-width:640px){ .info{grid-template-columns:1fr;gap:32px} dl{grid-template-columns:6.5rem 1fr} .copy{margin-left:8px} }
 dt{position:relative;top:-1px}
@@ -249,7 +250,7 @@ body.cart-open .scrim{opacity:1;pointer-events:auto}
     <div>
       <h2>Escribinos</h2>
       <dl>
-        <dt>WhatsApp</dt><dd><span class="phone" id="phone">+54 9 11 2399-1374</span><button class="copy" id="copy-phone" type="button">Copiar</button></dd>
+        <dt>WhatsApp</dt><dd><a class="phone" id="phone" href="https://wa.me/5491123991374?text=Hola%20Serenit%C3%A9%C3%A9!%20Quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">+54 9 11 2399-1374</a><button class="copy" id="copy-phone" type="button">Copiar</button></dd>
         <dt>Instagram</dt><dd><a href="https://www.instagram.com/serenitee.aversa/" target="_blank" rel="noopener">@serenitee.aversa</a></dd>
         <dt>Pago</dt><dd>Transferencia o efectivo</dd>
       </dl>
